@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Basics</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .flex-container{
+            display: flex;
+            /*flex-direction: column; you can also use row which is default instead of column
+            and also there is column-reverse option to be able to reverse it*/
+            /*flex-wrap: wrap; make it like a flex-direction: column; if the browser gets smaller by user*/
+        }
+
+        .item{
+            background: #f4f4f4;
+            border: #ccc solid 2px;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            flex: 1 0 200px; /*this means that flex-grow: 1 for every flex item and flex-shrink: 0; for every item and make the basis 200px*/
+        }
+
+        /*
+        width: 200px; in item class
+        .item-1{
+            flex-shrink: 0; //first one stays where it is and it won't gets smaller by browser move
+        }
+        .item-2{
+            flex-grow: 1; //it will fill up the rest of the space
+            flex-basis: 0; // it setup the value of widht to default
+        }
+        .item-3{
+            flex-grow: 2; // now we doubled the item-2
+            flex-basis: 0; // it setup the value of widht to default
+        }*/
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="item item-1">
+            <h3>Item 1</h3>
+        </div>
+        <div class="item item-2">
+            <h3>Item 2</h3>
+        </div>
+        <div class="item item-3">
+            <h3>Item 3</h3>
+        </div>
+    </div>
+</body>
+</html>
